@@ -1,6 +1,6 @@
 import telebot
 from config import keys, TOKEN
-from extensions import ConvertionException, CurrencyConverter
+from extensions import APIException, CurrencyConverter
 
 # @Yuri_ChangeCurrencyBot
 
