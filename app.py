@@ -33,12 +33,12 @@ def convert(message: telebot.types.Message):
         values = message.text.split(' ')
 
         if len(values) != 3:
-            raise ConvertionException('Слишком много параметров')
+            raise APIException('Слишком много параметров')
         quote, base, amount = values
         quote = quote.lower()
         base = base.lower()
         total_base = CurrencyConverter.get_price(quote, base, amount)
-    except ConvertionException as e:
+    except APIException as e:
         bot.reply_to(message, f'Ошибка пользователя\n{e}')
     except Exception as e:
         bot.reply_to(message, f'Не удалось обработать команду\n{e}')
