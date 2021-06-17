@@ -26,7 +26,7 @@ class CurrencyConverter:
 
         try:
             amount = float(amount)
-        except KeyError:
+        except ValueError:
             raise APIException(f'Не удалось обработать количество {amount}.')
 
         r = requests.get(f'https://min-api.cryptocompare.com/data/price?fsym={quote_ticker}&tsyms={base_ticker}')
