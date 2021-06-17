@@ -31,7 +31,7 @@ def convert(message: telebot.types.Message):
         values = message.text.split(' ')
 
         if len(values) != 3:
-            raise APIException('Слишком много параметров')
+            raise APIException('Введите команду или 3 параметра')
         quote, base, amount = values
         quote = quote.lower()
         base = base.lower()
