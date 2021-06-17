@@ -2,15 +2,13 @@ import telebot
 from config import keys, TOKEN
 from extensions import APIException, CurrencyConverter
 
-# @Yuri_ChangeCurrencyBot
-
 bot = telebot.TeleBot(TOKEN)
 
 
 # handler start help
 @bot.message_handler(commands=['start', 'help'])
 def help(message: telebot.types.Message):
-    text = 'Чтобы начать работу введите команду боту в следующем формате: \n \
+    text = 'Привет! Я Бот-Конвертер валют и я могу: \n Чтобы начать работу введите команду боту в следующем формате: \n \
 <имя валюты> \n \
 <в какую валюту перевести> \n \
 <количество переводимой валюты> \n увидеть список всех доступных валют: /values'

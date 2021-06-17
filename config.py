@@ -5,3 +5,5 @@ keys = {
     'доллар': 'USD',
     'евро': 'EUR',
 }
+
+# @Yuri_ChangeCurrencyBot
