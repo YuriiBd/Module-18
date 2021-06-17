@@ -12,7 +12,7 @@ class CurrencyConverter:
     def get_price(quote: str, base: str, amount: str):
 
         if quote == base:
-            raise APIException(f'Невозможно перевести одинаковые валюты {base}.')
+            raise APIException(f'Вы конвертируете две одинаковые валюты {base}.')
 
         try:
             quote_ticker = keys[quote]
